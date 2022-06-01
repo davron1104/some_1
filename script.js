@@ -2,7 +2,7 @@
 
 "use strict";
 
-const Object = {
+const something = {
 	filename: 'immidiate',
 	localname: 'something',
 	soOn: 'someone',
@@ -18,8 +18,7 @@ const Object = {
 // delete Object.localname;
 // console.log(Object);
 
-
-
+console.log(Object.keys(something).length);
 
 
 
