@@ -1,35 +1,27 @@
 // jshint esversion: 9
-
 "use strict";
 
-const something = {
-	filename: 'immidiate',
-	localname: 'something',
-	soOn: 'someone',
-		colors: {
-			bg: 'red',
-			border: 'yellow'
-		}
-};
-
-// const {bg, border} = Object.colors;
-// console.log(bg, border);
-
-// delete Object.localname;
-// console.log(Object);
-
-console.log(Object.keys(something).length);
-
-
-
-// бирдан n гача сонлар йигиндисини чикарамиз
-function summary (n) { 	
-let num = 0;
-	for(let i = 1; i <= n; i++) {
-		num = num + i;		 
+// Fibonacci 
+function fibonacciTask(n) {
+	let output = [];
+	if(typeof(n) !== 'number' || !Number.isInteger(n) || n === 0) {
+		return '';
 	}
-	console.log(num);
+	if(n === 1) {
+		output = [0];
+	} else if (n === 2) {
+		output = [0, 1];
+	} else {
+		output = [0, 1];
+		for(let i = 2; i < n; i++) {
+			output.push(output[output.length - 2] + output[output.length - 1]);
+		}
+	}
+
+	return output.join(' ');
 }
 
-summary(10);
+output = fibonacciTask(100);
+console.log(output);
 
+  
